@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-:root{
+
+:root {
   --text: rgb(215, 244, 240);
   --background: rgb(0, 0, 0);
   --primary: rgb(35, 128, 114);
   --secondary: rgb(11, 40, 36);
-  --accent: rgb(175, 233, 224);  
-  --shadow:rgb(11, 8, 8);
+  --accent: rgb(175, 233, 224);
+  --shadow: rgb(11, 8, 8);
 }
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-html{
+
+html {
   height: 100%;
   box-sizing: border-box;
 }
-body{
+
+body {
   background-color: var(--background);
   position: relative;
   margin: 0;
@@ -26,13 +30,17 @@ body{
   padding-bottom: 6.74rem;
   box-sizing: inherit;
 }
-li{
+
+li {
   list-style: none;
 }
-a{
+
+a {
   text-decoration: none;
 }
-.navbar,.navbar2{
+
+.navbar,
+.navbar2 {
   min-height: 70px;
   display: flex;
   justify-content: initial;
@@ -44,48 +52,57 @@ a{
   position: fixed;
   width: 100%;
 }
-.navbar{
+
+.navbar {
   transform: translateY(-100px);
   animation: anim 1s forwards;
 }
-@keyframes anim{
-  from{
+
+@keyframes anim {
+  from {
     transform: translateY(-100px);
   }
-  to{
+
+  to {
     transform: translateY(0px);
   }
 }
-.nav-menu{
+
+.nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: end;
   gap: 30px;
 }
-.nav-branding{
+
+.nav-branding {
   font-size: 1.8rem;
   font-family: 'Orbitron', sans-serif;
   cursor: pointer;
   color: var(--primary);
 }
-.nav-link{
+
+.nav-link {
   font-size: 1.2rem;
   transition: 0.7s ease;
   cursor: pointer;
   color: var(--text);
   font-family: 'Orbitron', sans-serif;
-  padding:20px;
-  border-radius:5px;
+  padding: 20px;
+  border-radius: 5px;
 }
-.nav-link:hover{
+
+.nav-link:hover {
   color: var(--background);
   background-color: var(--text);
 }
-.hamburger{
+
+.hamburger {
   display: none;
   cursor: pointer;
 }
-.bar{
+
+.bar {
   display: block;
   width: 25px;
   height: 3px;
@@ -95,7 +112,8 @@ a{
   background-color: var(--primary);
 }
 
-.footer,.footer2{
+.footer,
+.footer2 {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
@@ -105,26 +123,33 @@ a{
   right: 0;
   bottom: 0;
 }
-.footer{
+
+.footer {
   transform: translateY(100px);
   animation: anim2 1s forwards;
 }
-@keyframes anim2{
-  from{
+
+@keyframes anim2 {
+  from {
     transform: translateY(100px);
   }
-  to{
+
+  to {
     transform: translateY(0px);
   }
 }
-.social-icon{
+
+.social-icon {
   display: flex;
   gap: 20px;
 }
-.social-icon a:hover{
+
+.social-icon a:hover {
   transform: translateY(-2px);
 }
-.main,.about{
+
+.main,
+.about {
   padding-top: 70px;
   display: flex;
   justify-content: space-between;
@@ -133,20 +158,22 @@ a{
   padding-right: 100px;
 }
 
-.befintro{
+.befintro {
   transform: translateX(-800px);
   animation: anim3 1s forwards;
 }
-@keyframes anim3{
-  from{
+
+@keyframes anim3 {
+  from {
     transform: translateX(-800px);
   }
-  to{
+
+  to {
     transform: translateX(0px);
   }
 }
 
-.intro{
+.intro {
   max-width: 800px;
   display: flex;
   flex-flow: column nowrap;
@@ -154,7 +181,8 @@ a{
   align-items: start;
   height: 500px
 }
-.img-back{
+
+.img-back {
   width: 600px;
   height: 600px;
   position: absolute;
@@ -162,7 +190,8 @@ a{
   border-radius: 29% 71% 62% 38% / 29% 64% 36% 71%;
   z-index: -1;
 }
-.img-back-ab{
+
+.img-back-ab {
   width: 280px;
   height: 280px;
   position: absolute;
@@ -170,55 +199,63 @@ a{
   border-radius: 29% 71% 62% 38% / 29% 64% 36% 71%;
   z-index: -1;
 }
-.intro-img{
+
+.intro-img {
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 500px;
 }
-.intro-img img{
+
+.intro-img img {
   width: 400px;
   box-shadow: 1px 1px 10px 10px var(--shadow);
 }
-.hello{
+
+.hello {
   color: var(--accent);
   font-size: 80px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.i{
+
+.i {
   font-size: 50px;
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: row;
 }
-.heading{
+
+.heading {
   color: var(--accent);
   font-size: 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-bottom: 3.5px solid black;
 }
-.nav-branding2{
+
+.nav-branding2 {
   font-size: 60px;
   font-family: 'Orbitron', sans-serif;
   cursor: pointer;
   color: var(--primary);
 }
-.copy{
+
+.copy {
   font-size: 1.2rem;
   color: var(--text);
   font-family: 'Orbitron', sans-serif;
-  padding:0 10px 0 10px;
+  padding: 0 10px 0 10px;
 }
 
 /*about page*/
 
-.about{
+.about {
   padding-left: 50px;
   padding-right: 50px;
 }
-.des-section-head{
+
+.des-section-head {
   display: flex;
   flex-flow: column;
   color: var(--text);
@@ -226,10 +263,12 @@ a{
   font-size: 30px;
 
 }
-.des-section-head p{
+
+.des-section-head p {
   font-size: 20px;
 }
-.section-about{
+
+.section-about {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -237,15 +276,18 @@ a{
   width: 100%;
   gap: 30px;
 }
-.about-head{
+
+.about-head {
   padding-bottom: 30px;
 }
-.about-head h2{
+
+.about-head h2 {
   font-size: 50px;
   color: var(--primary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.line2{
+
+.line2 {
   position: absolute;
   height: 5px;
   width: 0px;
@@ -253,27 +295,32 @@ a{
   background-color: var(--text);
   animation: line-anim 1s forwards;
 }
-@keyframes line-anim{
-  from{
+
+@keyframes line-anim {
+  from {
     width: 0px;
   }
-  to{
+
+  to {
     width: 100px;
   }
 }
-.des1{
+
+.des1 {
   padding-top: 20px;
   font-size: 20px;
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.about-items{
+
+.about-items {
   display: flex;
   flex-flow: row wrap;
   justify-content: initial;
   margin-top: 20px;
 }
-.item-about{
+
+.item-about {
   display: flex;
   flex-direction: row;
   padding: 15px;
@@ -281,48 +328,59 @@ a{
   font-size: 17px;
   gap: 10px;
 }
-.des{
+
+.des {
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transform: translateX(-500px);
   animation: item-anim 1s forwards;
 }
-@keyframes item-anim{
-  from{
+
+@keyframes item-anim {
+  from {
     transform: translateX(-500px);
   }
-  to{
+
+  to {
     transform: translateX(0px);
   }
 }
-.arrow{
+
+.arrow {
   animation: arrow-anim 1s forwards;
 }
-@keyframes arrow-anim{
-  from{
+
+@keyframes arrow-anim {
+  from {
     transform: rotate(-90deg);
   }
-  to{
+
+  to {
     transform: rotate(0deg);
   }
 }
-.about-img{
+
+.about-img {
   max-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 10px 10px var(--shadow);
 }
-.des-section{
+
+.des-section {
   max-width: 900px;
 }
-.about-img img{
+
+.about-img img {
   width: 100%;
 }
-.item-in{
+
+.item-in {
   overflow: hidden;
 }
-.skill{
+
+.skill {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -331,7 +389,8 @@ a{
   margin-top: 30px;
   gap: 10px;
 }
-.skill-item{
+
+.skill-item {
   width: 440px;
   height: 80px;
   border: 2px solid var(--accent);
@@ -347,13 +406,15 @@ a{
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.line-container{
+
+.line-container {
   width: 370px;
   height: 20px;
   border: 1px solid none;
   border-radius: 10px;
 }
-.Machine-learning{
+
+.Machine-learning {
   position: absolute;
   width: 0px;
   background-color: var(--primary);
@@ -361,15 +422,18 @@ a{
   border-radius: 10px;
   animation: mac-anim 1s forwards;
 }
-@keyframes mac-anim{
-  from{
-    width:0px;
+
+@keyframes mac-anim {
+  from {
+    width: 0px;
   }
-  to{
-    width:351.5px;
+
+  to {
+    width: 351.5px;
   }
 }
-.Flutter{
+
+.Flutter {
   position: absolute;
   width: 0px;
   background-color: var(--primary);
@@ -377,15 +441,18 @@ a{
   border-radius: 10px;
   animation: flu-anim 1s forwards;
 }
-@keyframes flu-anim{
-  from{
-    width:0px;
+
+@keyframes flu-anim {
+  from {
+    width: 0px;
   }
-  to{
-    width:111px;
+
+  to {
+    width: 111px;
   }
 }
-.ai{
+
+.ai {
   position: absolute;
   width: 0px;
   background-color: var(--primary);
@@ -393,15 +460,18 @@ a{
   border-radius: 10px;
   animation: ai-anim 1s forwards;
 }
-@keyframes ai-anim{
-  from{
-    width:0px;
+
+@keyframes ai-anim {
+  from {
+    width: 0px;
   }
-  to{
-    width:333px;
+
+  to {
+    width: 333px;
   }
 }
-.Python{
+
+.Python {
   position: absolute;
   width: 0px;
   background-color: var(--primary);
@@ -409,15 +479,18 @@ a{
   border-radius: 10px;
   animation: py-anim 1s forwards;
 }
-@keyframes py-anim{
-  from{
-    width:0px;
+
+@keyframes py-anim {
+  from {
+    width: 0px;
   }
-  to{
-    width:296px;
+
+  to {
+    width: 296px;
   }
 }
-.powerbi{
+
+.powerbi {
   position: absolute;
   width: 0px;
   background-color: var(--primary);
@@ -425,15 +498,18 @@ a{
   border-radius: 10px;
   animation: pow-anim 1s forwards;
 }
-@keyframes pow-anim{
-  from{
-    width:0px;
+
+@keyframes pow-anim {
+  from {
+    width: 0px;
   }
-  to{
-    width:277.5px;
+
+  to {
+    width: 277.5px;
   }
 }
-.Marketing{
+
+.Marketing {
   position: absolute;
   width: 0px;
   background-color: var(--primary);
@@ -441,74 +517,87 @@ a{
   border-radius: 10px;
   animation: mar-anim 1s forwards;
 }
-@keyframes mar-anim{
-  from{
-    width:0px;
+
+@keyframes mar-anim {
+  from {
+    width: 0px;
   }
-  to{
-    width:259px;
+
+  to {
+    width: 259px;
   }
 }
 
 /* Resume page */
-.resume{
+.resume {
   padding-left: 50px;
   padding-right: 50px;
 }
-.resume-head{
+
+.resume-head {
   padding-top: 60px;
   padding-bottom: 30px;
 }
-.resume-head h2{
+
+.resume-head h2 {
   font-size: 50px;
   color: var(--primary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.timeline{
+
+.timeline {
   position: relative;
   max-width: 1200px;
   margin: 20px auto;
   margin-top: 30px;
 }
-.timeline h3{
+
+.timeline h3 {
   font-size: 30px;
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container{
+
+.container {
   padding: 10px 10px;
   position: relative;
   background: transparent;
 }
-.text-box{
+
+.text-box {
   padding: 20px 30px;
   background: var(--secondary);
   position: relative;
   border-radius: 20px;
   font-size: 30px;
 }
-.text-box h4{
+
+.text-box h4 {
   font-size: 25px;
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.text-box p{
+
+.text-box p {
   padding-top: 10px;
   font-size: 18px;
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.text-box ul{
+
+.text-box ul {
   padding-top: 10px;
   font-size: 16px;
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-left: 20px;
 }
-.text-box ul li{
+
+.text-box ul li {
   list-style: disc;
 }
-.text-box span{
+
+.text-box span {
   padding: 6px 18px 6px 18px;
   font-size: 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -516,7 +605,8 @@ a{
   margin-left: 20px;
   border-radius: 10px;
 }
-.container .img{
+
+.container .img {
   content: '';
   position: absolute;
   background-color: var(--accent);
@@ -526,7 +616,8 @@ a{
   left: -28px;
   top: 32px;
 }
-.timeline::after{
+
+.timeline::after {
   content: '';
   position: absolute;
   width: 2px;
@@ -538,11 +629,13 @@ a{
   left: -14px;
   animation: time 1s forwards;
 }
-@keyframes time{
-  from{
+
+@keyframes time {
+  from {
     height: 0;
   }
-  to{
+
+  to {
     height: 87%;
   }
 }
@@ -550,20 +643,23 @@ a{
 
 /*Services page*/
 
-.service{
+.service {
   padding-left: 50px;
   padding-right: 50px;
 }
-.service-head{
+
+.service-head {
   padding-top: 60px;
   padding-bottom: 30px;
 }
-.service-head h2{
+
+.service-head h2 {
   font-size: 50px;
   color: var(--primary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.timeline-2{
+
+.timeline-2 {
   padding-top: 30px;
   display: flex;
   justify-content: center;
@@ -572,11 +668,13 @@ a{
   flex-wrap: wrap;
   gap: 20px;
 }
-.container-service{
+
+.container-service {
   flex-grow: 1;
   flex-basis: 400px;
 }
-.text-box-2{
+
+.text-box-2 {
   padding: 20px 30px;
   background: var(--secondary);
   position: relative;
@@ -584,46 +682,53 @@ a{
   font-size: 30px;
   display: flex;
 }
-.text-box-2 h4{
+
+.text-box-2 h4 {
   font-size: 25px;
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.text-box-2 p{
+
+.text-box-2 p {
   padding-top: 10px;
   font-size: 18px;
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.text-box-2 span{
+
+.text-box-2 span {
   border-radius: 50%;
   padding-right: 20px;
 }
 
 /* Contact page*/
 
-.con-container{
+.con-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
 }
-.locate{
+
+.locate {
   flex-grow: 1;
   flex-basis: 300px;
   border-radius: 10px;
 }
-.fill-form{
+
+.fill-form {
   flex-grow: 1;
   flex-basis: 700px;
   border-radius: 10px;
 }
-.container-contact{
+
+.container-contact {
   display: flex;
   gap: 10px;
   background-color: var(--accent);
 }
-.text-box-3{
+
+.text-box-3 {
   padding: 10px 10px;
   background: var(--accent);
   position: relative;
@@ -632,23 +737,27 @@ a{
   display: flex;
   flex-flow: column wrap;
 }
-.text-box-3 h4{
+
+.text-box-3 h4 {
   font-size: 20px;
   color: var(--secondary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.text-box-3 p{
+
+.text-box-3 p {
   padding-top: 10px;
   font-size: 15px;
   font-weight: 500;
   color: var(--secondary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.text-box-3 span{
+
+.text-box-3 span {
   border-radius: 50%;
   padding-right: 20px;
 }
-.map{
+
+.map {
   position: relative;
   border: 0;
   flex-grow: 1;
@@ -656,20 +765,23 @@ a{
   padding: 20px;
   height: 400px;
 }
-.fill-form{
+
+.fill-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   background-color: var(--secondary);
   padding: 10px;
 }
-.form{
+
+.form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
 }
-.la-name{
+
+.la-name {
   padding: 0px 10px 0px 10px;
   display: flex;
   flex-direction: column;
@@ -677,7 +789,8 @@ a{
   flex-grow: 1;
   flex-basis: 300px;
 }
-.la-email{
+
+.la-email {
   padding: 0px 10px 0px 10px;
   display: flex;
   flex-direction: column;
@@ -685,7 +798,8 @@ a{
   flex-grow: 1;
   flex-basis: 300px;
 }
-.la-subject{
+
+.la-subject {
   padding: 0px 10px 0px 10px;
   display: flex;
   flex-direction: column;
@@ -693,7 +807,8 @@ a{
   flex-grow: 1;
   flex-basis: 600px;
 }
-.la-message{
+
+.la-message {
   padding: 0px 10px 0px 10px;
   display: flex;
   flex-direction: column;
@@ -701,39 +816,47 @@ a{
   flex-grow: 1;
   flex-basis: 600px;
 }
-.la-btn{
+
+.la-btn {
   padding: 0px 10px 0px 10px;
 }
-label{
+
+label {
   font-size: 20px;
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-input{
+
+input {
   height: 40px;
 }
-input::placeholder{
+
+input::placeholder {
   font-size: 15px;
   color: var(--secondary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 5px;
 }
-input{
+
+input {
   font-size: 15px;
   color: var(--primary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 5px;
 }
-textarea{
+
+textarea {
   font-size: 15px;
   color: var(--primary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 5px;
 }
-.la-btn{
+
+.la-btn {
   padding: 20px;
 }
-#submit{
+
+#submit {
   padding: 15px;
   font-size: 15px;
   border-radius: 5px;
@@ -747,98 +870,127 @@ textarea{
 
 
 
-@media(max-width:1340px){
-  .section-about{
+@media(max-width:1340px) {
+  .section-about {
     justify-content: center;
   }
-  .about-img{
+
+  .about-img {
     max-width: 400px;
   }
-  .item-about{
+
+  .item-about {
     width: 350px;
   }
-  .des-section{
+
+  .des-section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 }
-@media(max-width:1130px){
-  .navbar,.navbar2{
+
+@media(max-width:1130px) {
+
+  .navbar,
+  .navbar2 {
     gap: 70px;
   }
-  .nav-menu{
+
+  .nav-menu {
     gap: 50px;
   }
-  .main{
+
+  .main {
     justify-content: center;
   }
 }
-@media(max-width:900px){
-  .about-head h2{
+
+@media(max-width:900px) {
+  .about-head h2 {
     font-size: 45px;
   }
-  .resume-head h2{
+
+  .resume-head h2 {
     font-size: 45px;
   }
-  .service-head h2{
+
+  .service-head h2 {
     font-size: 45px;
   }
-  .des1{
+
+  .des1 {
     font-size: 18px;
   }
-  .des-section-head{
+
+  .des-section-head {
     font-size: 20px;
   }
-  .des-section-head p{
+
+  .des-section-head p {
     font-size: 15px;
   }
-  .des{
+
+  .des {
     font-size: 15px;
   }
-  .arrow img{
+
+  .arrow img {
     width: 15px !important;
     height: 15px !important;
   }
-  .item-about{
+
+  .item-about {
     width: 320px;
   }
 }
-@media(max-width:850px){
-  .navbar,.navbar2{
+
+@media(max-width:850px) {
+
+  .navbar,
+  .navbar2 {
     gap: 40px;
   }
-  .nav-menu{
+
+  .nav-menu {
     gap: 30px;
   }
-  @keyframes time{
-    from{
+
+  @keyframes time {
+    from {
       height: 0;
     }
-    to{
+
+    to {
       height: 90%;
     }
   }
 }
 
-@media(max-width:770px){
-  .hamburger{
+@media(max-width:770px) {
+  .hamburger {
     display: block;
   }
-  .hamburger.active .bar:nth-child(2){
+
+  .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
-  .hamburger.active .bar:nth-child(1){
+
+  .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-  .hamburger.active .bar:nth-child(3){
+
+  .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  .navbar,.navbar2{
+
+  .navbar,
+  .navbar2 {
     justify-content: space-between;
   }
-  .nav-menu{
+
+  .nav-menu {
     position: fixed;
     left: 100%;
     top: 70px;
@@ -849,10 +1001,12 @@ textarea{
     text-align: initial;
     transition: 0.3s;
   }
-  .nav-item{
-    margin: 16px 50px ;
+
+  .nav-item {
+    margin: 16px 50px;
   }
-  .nav-menu.active{
+
+  .nav-menu.active {
     justify-content: initial;
     transform: translateX(-220px);
     transition: all 0.3s ease-in-out;
@@ -861,287 +1015,355 @@ textarea{
     height: 80rem;
   }
 }
-@media(max-width:700px){
-  .hello{
+
+@media(max-width:700px) {
+  .hello {
     font-size: 60px;
   }
-  .i{
+
+  .i {
     font-size: 30px;
   }
-  .heading{
+
+  .heading {
     font-size: 30px;
   }
-  .nav-branding2{
+
+  .nav-branding2 {
     font-size: 40px;
   }
-  .footer,.footer2{
+
+  .footer,
+  .footer2 {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-  .about{
+
+  .about {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .resume{
+
+  .resume {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .service{
+
+  .service {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
-@media(max-width:500px){
-  .hello{
+
+@media(max-width:500px) {
+  .hello {
     font-size: 55px;
   }
-  .i{
+
+  .i {
     font-size: 25px;
   }
-  .heading{
+
+  .heading {
     font-size: 25px;
   }
-  .nav-branding2{
+
+  .nav-branding2 {
     font-size: 35px;
   }
-  .skill-item{
+
+  .skill-item {
     width: 350px;
   }
-  .line-container{
+
+  .line-container {
     width: 280px;
     height: 20px;
     border: 1px solid none;
     border-radius: 10px;
   }
-  @keyframes mac-anim{
-    from{
-      width:0px;
+
+  @keyframes mac-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:266px;
-    }
-  }
-  @keyframes flu-anim{
-    from{
-      width:0px;
-    }
-    to{
-      width:84px;
+
+    to {
+      width: 266px;
     }
   }
-  @keyframes ai-anim{
-    from{
-      width:0px;
+
+  @keyframes flu-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:252px;
-    }
-  }
-  @keyframes py-anim{
-    from{
-      width:0px;
-    }
-    to{
-      width:224px;
+
+    to {
+      width: 84px;
     }
   }
-  @keyframes pow-anim{
-    from{
-      width:0px;
+
+  @keyframes ai-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:210px;
+
+    to {
+      width: 252px;
     }
   }
-  @keyframes mar-anim{
-    from{
-      width:0px;
+
+  @keyframes py-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:196px;
+
+    to {
+      width: 224px;
+    }
+  }
+
+  @keyframes pow-anim {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 210px;
+    }
+  }
+
+  @keyframes mar-anim {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 196px;
     }
   }
 }
-@media(max-width:400px){
-  .about{
+
+@media(max-width:400px) {
+  .about {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .resume{
+
+  .resume {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .service{
+
+  .service {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .skill-item{
+
+  .skill-item {
     width: 320px;
   }
-  .line-container{
+
+  .line-container {
     width: 250px;
     height: 10px;
     border: 1px solid none;
     border-radius: 10px;
   }
-  @keyframes mac-anim{
-    from{
-      width:0px;
+
+  @keyframes mac-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:237.5px;
-    }
-  }
-  @keyframes flu-anim{
-    from{
-      width:0px;
-    }
-    to{
-      width:75px;
+
+    to {
+      width: 237.5px;
     }
   }
-  @keyframes ai-anim{
-    from{
-      width:0px;
+
+  @keyframes flu-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:225px;
-    }
-  }
-  @keyframes py-anim{
-    from{
-      width:0px;
-    }
-    to{
-      width:200px;
+
+    to {
+      width: 75px;
     }
   }
-  @keyframes pow-anim{
-    from{
-      width:0px;
+
+  @keyframes ai-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:187.5px;
+
+    to {
+      width: 225px;
     }
   }
-  @keyframes mar-anim{
-    from{
-      width:0px;
+
+  @keyframes py-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:175px;
+
+    to {
+      width: 200px;
+    }
+  }
+
+  @keyframes pow-anim {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 187.5px;
+    }
+  }
+
+  @keyframes mar-anim {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 175px;
     }
   }
 }
-@media(max-width:400px){
-  .about{
+
+@media(max-width:400px) {
+  .about {
     padding-left: 5px;
     padding-right: 5px;
   }
-  .resume{
+
+  .resume {
     padding-left: 5px;
     padding-right: 5px;
   }
-  .service{
+
+  .service {
     padding-left: 5px;
     padding-right: 5px;
   }
-  .skill-item{
+
+  .skill-item {
     width: 270px;
   }
-  .line-container{
+
+  .line-container {
     width: 200px;
     height: 5px;
     border: 1px solid none;
     border-radius: 10px;
   }
-  @keyframes mac-anim{
-    from{
-      width:0px;
+
+  @keyframes mac-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:190px;
-    }
-  }
-  @keyframes flu-anim{
-    from{
-      width:0px;
-    }
-    to{
-      width:60px;
+
+    to {
+      width: 190px;
     }
   }
-  @keyframes ai-anim{
-    from{
-      width:0px;
+
+  @keyframes flu-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:180px;
-    }
-  }
-  @keyframes py-anim{
-    from{
-      width:0px;
-    }
-    to{
-      width:160px;
+
+    to {
+      width: 60px;
     }
   }
-  @keyframes pow-anim{
-    from{
-      width:0px;
+
+  @keyframes ai-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:150px;
+
+    to {
+      width: 180px;
     }
   }
-  @keyframes mar-anim{
-    from{
-      width:0px;
+
+  @keyframes py-anim {
+    from {
+      width: 0px;
     }
-    to{
-      width:140px;
+
+    to {
+      width: 160px;
+    }
+  }
+
+  @keyframes pow-anim {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 150px;
+    }
+  }
+
+  @keyframes mar-anim {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 140px;
     }
   }
 }
-@media(max-width:300px){
-  .about-head h2{
+
+@media(max-width:300px) {
+  .about-head h2 {
     font-size: 25px;
   }
-  .about-head p{
+
+  .about-head p {
     font-size: 12px;
   }
-  .resume-head h2{
+
+  .resume-head h2 {
     font-size: 25px;
   }
-  .resume-head p{
+
+  .resume-head p {
     font-size: 12px;
   }
-  .service-head h2{
+
+  .service-head h2 {
     font-size: 25px;
   }
-  .service-head p{
+
+  .service-head p {
     font-size: 12px;
   }
-  .des-section-head h3{
+
+  .des-section-head h3 {
     font-size: 20px;
   }
-  .des-section-head p{
+
+  .des-section-head p {
     font-size: 15px;
   }
-  .des{
+
+  .des {
     font-size: 12px;
   }
-  .arrow img{
+
+  .arrow img {
     width: 12px !important;
     height: 12px !important;
   }
-  .item-about{
+
+  .item-about {
     width: 250px;
   }
 }
-
-
-
-
