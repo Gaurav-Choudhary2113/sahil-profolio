@@ -1,9 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const postmark = require("postmark");
 
-const serverToken = "a9039ae9-bf9f-4d89-9126-79523b5af809"; // Replace with your actual Postmark server token
-const client = new postmark.ServerClient(serverToken);
+const nodemailer = require("nodemailer");
+require("dotenv").config();
+
+// const postmark = require("postmark");
+// const serverToken = "a9039ae9-bf9f-4d89-9126-79523b5af809";
+// const client = new postmark.ServerClient(serverToken);
 
 const app = express();
 
@@ -35,31 +38,34 @@ app.get("/service", (req, res) => {
   res.sendFile("public/service.html", { root: __dirname });
 });
 
-const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(
-  "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"
-);
+app.use(express.urlencoded({ extended: true }));
 
 app.post("/contact", (req, res) => {
   const { name, email, subject, message } = req.body;
 
-  const emailBody = {
-    From: "gaurav.choudhary2022@vitstudent.ac.in", // Replace with your email address
-    To: "gaurav.choudhary2022@vitstudent.ac.in", // Replace with the recipient's email address
-    Subject: subject,
-    TextBody: `From: ${name} (${email})\n\n${message}`,
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    auth: {
+      user: "a123rora111@gmail.com",
+      pass: "ftie tffu bmwl dekd",
+    },
+  });
+
+  const mailOptions = {
+    from: "a123rora111@gmail.com",
+    to: "a123rora111@gmail.com",
+    subject: subject,
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
-  client
-    .sendEmail(emailBody)
-    .then((response) => {
-      console.log("Email sent:", response);
-      res.send("Email sent successfully!");
-    })
-    .catch((error) => {
-      console.error("Error sending email:", error);
-      res.status(500).send("Error sending email");
-    });
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log("Email sent: " + info.response);
+    res.sendFile("public/contact.html", { root: __dirname });
+  });
 });
 
 // Start the server

@@ -13,6 +13,11 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
+function displayNotification() {
+  const notification = document.getElementById("notification");
+  notification.style.display = "block";
+}
+
 var typed = new Typed(".heading", {
   strings: [
     "Data Scientist.",
